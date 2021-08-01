@@ -18,7 +18,7 @@ public class AlarmTuringBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "1931529186:AAGRQxg16hpAZ6LqGrwHjv8HNNntCMnSar0";
+        return "TOKEN";
     }
 
     @Override
