@@ -18,7 +18,7 @@ public class AlarmTuringBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "TOKEN";
+        return "1931529186:AAHZ475A6MZGffo3nqsBp1UATkp07WBmg-Y";
     }
 
     @Override
@@ -45,6 +45,24 @@ public class AlarmTuringBot extends TelegramLongPollingBot {
                 msgSendList.add(sendMessage1);
                 msgSendList.add(sendMessage2);
                 msgSendList.add(sendMessage3);
+            }else if (msg.equals("/help") || msg.equals("/help@AlarmTuringBot")) {
+                String helpMsg1 = "Welcome to the AlarmTuring Bot! To connect your app to this Bot and chat follow this steps:";
+                String helpMsg2 = "1 - Get the chatID of this chat using the /chatid command with me :)";
+                String helpMsg3 = "2 - Open the AlarmTuringApp and activate the Bot function in the bottom panel, and insert the chatID in the form below. (Do not forget the \"-\" symbol if you are in a group chat).";
+                String helpMsg4 = "3 - Click the confirm button. If all is correct I'll send you a confirm message :)";
+                String helpMsg5 = "Now enjoy the app and see what happens all from this chat!";
+
+                SendMessage m1 = new SendMessage(chatId, helpMsg1);
+                SendMessage m2 = new SendMessage(chatId, helpMsg2);
+                SendMessage m3 = new SendMessage(chatId, helpMsg3);
+                SendMessage m4 = new SendMessage(chatId, helpMsg4);
+                SendMessage m5 = new SendMessage(chatId, helpMsg5);
+
+                msgSendList.add(m1);
+                msgSendList.add(m2);
+                msgSendList.add(m3);
+                msgSendList.add(m4);
+                msgSendList.add(m5);
             }
 
             //EXECUTE Send of the msg list
